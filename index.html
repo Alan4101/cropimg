@@ -1,0 +1,153 @@
+<!DOCTYPE html> 
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Croppie - a simple javascript image cropper - Foliotek</title>
+
+        <meta name="description" content="Croppie is an easy to use javascript image cropper.">
+
+        <meta property="og:title" content="Croppie - a javascript image cropper">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://foliotek.github.io/Croppie">
+        <meta property="og:description" content="Croppie is an easy to use javascript image cropper.">
+        <meta property="og:image" content="https://foliotek.github.io/Croppie/demo/hero.png">
+
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700' rel='stylesheet' type='text/css'>
+        <link rel="Stylesheet" type="text/css" href="demo/prism.css" />
+        <!--<link rel="Stylesheet" type="text/css" href="bower_components/sweetalert/dist/sweetalert.css" />-->
+        <link rel="Stylesheet" type="text/css" href="croppie.css" />
+        <link rel="Stylesheet" type="text/css" href="demo/demo.css" />
+        <link rel="icon" href="//foliotek.github.io/favico-64.png" />
+    </head>
+    <body>
+
+        <section style="display: none">
+
+            <div class="demo-wrap">
+                <div class="container">
+                    <div class="grid">
+                        <div class="col-1-2">
+                            <strong>Basic Example</strong>
+
+                          <div class="actions">
+                              <button class="basic-result">Result</button>
+                              <input type="number" class="basic-width" placeholder="width" /> x <input type="number" class="basic-height" placeholder="height" />
+                          </div>
+                        </div>
+                        <div class="col-1-2">
+                            <div id="demo-basic"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="demo-wrap">
+                    <div class="container">
+                        <div class="grid">
+                            <div class="col-1-2">
+                                <div id="vanilla-demo"></div>
+                            </div>
+                            <div class="col-1-2">
+
+                                <div class="actions">
+                                    <button class="vanilla-result">Result</button>
+                                    <button class="vanilla-rotate" data-deg="-90">Rotate Left</button>
+                                    <button class="vanilla-rotate" data-deg="90">Rotate Right</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-wrap">
+                    <div class="container">
+                        <div class="grid">
+                            <div class="col-1-2">
+
+                                <div class="actions">
+                                    <button class="resizer-result">Result</button>
+                                </div>
+                            </div>
+                            <div class="col-1-2">
+                                <div id="resizer-demo"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+
+
+
+
+
+<!--|||||||||||| MY |||||||||||||||-->
+
+                <div class="demo-wrap upload-demo" style="border: none">
+                    <div class="container">
+                     <div class="grid">
+                        <div class="col-1-2">
+                            <div class="actions">
+                                <a class="btn file-btn">
+                                    <span>Upload</span>
+                                    <input type="file" id="upload" value="Choose a file" accept="image/*" />
+                                </a>
+                                <button class="upload-result">Result</button>
+                            </div>
+                        </div>
+                        <div class="col-1-2">
+                            <div class="upload-msg">
+                                Upload a file to start cropping
+                            </div>
+                            <div class="upload-demo-wrap">
+                                <div id="upload-demo"></div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                </div>
+
+            <!--End-->
+<!--  Result  Img -->
+        <div><img id="test" src="" alt=""></div>
+<!-- End-->
+
+
+
+
+
+
+
+
+        <footer>
+
+
+
+            <!--|||||||||| need  ||||||||||||-->
+          <span style="display: none" id="year"> </span>
+            <!--||||||||||  End  ||||||||||||-->
+
+
+
+        </footer>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
+        <script src="demo/prism.js"></script>
+        <!--<script src="bower_components/sweetalert/dist/sweetalert.min.js">--></script>
+
+        <script src="croppie.js"></script>
+        <script src="demo/demo.js"></script>
+        <!--<script src="bower_components/exif-js/exif.js">--></script>
+        <script>
+        document.getElementById('year').innerHTML = (new Date).getFullYear();
+            Demo.init();
+        </script>
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-2398527-4');ga('send','pageview');
+        </script>
+    </body>
+</html>
